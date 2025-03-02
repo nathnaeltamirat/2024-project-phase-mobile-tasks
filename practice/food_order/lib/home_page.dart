@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import "profile_page.dart";
+import "details_page.dart";
 
 class HomePage extends StatelessWidget {
   @override
@@ -44,7 +45,7 @@ class HomePage extends StatelessWidget {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => ProfilePage()),
+                    MaterialPageRoute(builder: (context) => DetailsPage()),
                   );
                 },
                 child: Text(
