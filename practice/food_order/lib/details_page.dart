@@ -28,7 +28,7 @@ class DetailsPage extends StatelessWidget {
             ),
             Container(
               width: double.infinity,
-              height: 350,
+              height: 420,
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.only(topLeft: Radius.circular(90)),
@@ -76,7 +76,7 @@ class DetailsPage extends StatelessWidget {
                     children: [
                       Container(
                         alignment: Alignment.centerLeft,
-                        margin: EdgeInsets.only(top: 10, left: 49),
+                        margin: EdgeInsets.only(top: 10, left: 53),
                         child: Text(
                           "Beef Burger",
                           style: TextStyle(fontWeight: FontWeight.bold),
@@ -85,12 +85,89 @@ class DetailsPage extends StatelessWidget {
                       ),
                       Container(
                         child: Text(
-                          "Big juicy buger with Cheese,Lettuce,Onions,\n Tomato and special sauce!",
+                          "Big juicy buger with Cheese,Lettuce,Onions,\nTomato and special sauce!",
                         ),
                       ),
                     ],
                   ),
-                  Column(),
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Container(
+                        alignment: Alignment.centerLeft,
+                        margin: EdgeInsets.only(top: 35, left: 53),
+                        child: Text("Add ons:"),
+                      ),
+                      Container(
+                        // alignment: Alignment.centerLeft,
+                        margin: EdgeInsets.only(top: 20),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            Container(
+                              margin: EdgeInsets.only(left: 10),
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(15),
+                                child: Image.asset(
+                                  "assets/image1.jpg",
+                                  width: 70,
+                                  height: 70,
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(15),
+                                child: Image.asset(
+                                  "assets/image2.jpg",
+                                  width: 70,
+                                  height: 70,
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                            ),
+                            Container(
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(15),
+                                child: Image.asset(
+                                  "assets/image3.jpg",
+                                  width: 70,
+                                  height: 70,
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      Container(
+                        margin: EdgeInsets.only(top: 20),
+                        width: 300,
+                        child: ElevatedButton(
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => ProfilePage(),
+                              ),
+                            );
+                          },
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Color(0xFF2C3DDB),
+                            foregroundColor: Colors.white,
+                          ),
+                          child: Text(
+                            "Add To Cart",
+                            style: TextStyle(
+                              fontSize: 18,
+                              fontWeight: FontWeight.w900,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                 ],
               ),
             ),
