@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:form/signin_page.dart';
+import 'package:form/createAccount.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,13 +12,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
-      ),
-      home: SigninPage(),
+      theme: ThemeData(),
+      home: createAccount(),
     );
   }
 }
-
-
-
-

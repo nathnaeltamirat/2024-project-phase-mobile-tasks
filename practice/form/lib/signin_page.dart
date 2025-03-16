@@ -9,7 +9,7 @@ class SigninPage extends StatelessWidget {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          SizedBox(height: 50),
+          SizedBox(height: 60),
           Center(
             child: Text(
               "Welcome",
@@ -42,6 +42,7 @@ class SigninPage extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 15,
                     overflow: TextOverflow.visible,
+                    color: Colors.black.withOpacity(0.4),
                   ),
                   textAlign: TextAlign.left,
                 ),
@@ -49,24 +50,127 @@ class SigninPage extends StatelessWidget {
             ],
           ),
           SizedBox(height: 60),
-          Row(children: [
-            SizedBox(width:20),
-            Text(
-              "Email",
-              style:TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 22
-              )
-            )
-          ],),
-          SizedBox(
-            height:20,
+          Row(
+            children: [
+              SizedBox(width: 20),
+              Text(
+                "Email",
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 22),
+              ),
+            ],
+          ),
+          SizedBox(height: 5),
+          Container(
+            margin: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
+            color: Colors.grey.withOpacity(0.1),
+            child: TextField(
+              decoration: InputDecoration(
+                hintText: "Enter your email",
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(10),
+                ),
+              ),
+            ),
+          ),
+          SizedBox(height: 20),
+          Row(
+            children: [
+              SizedBox(width: 20),
+              Text(
+                "Password",
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 22),
+              ),
+            ],
           ),
           Container(
+            margin: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
+            color: Colors.grey.withOpacity(0.1),
             child: TextField(
-              
+              decoration: InputDecoration(
+                hintText: "Enter your email",
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(10),
+                ),
+              ),
             ),
-          )
+          ),
+          Container(
+            margin: EdgeInsets.symmetric(horizontal: 20),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+
+              children: [
+                SizedBox(width: 20),
+                Text(
+                  "Forget Password",
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
+                ),
+              ],
+            ),
+          ),
+          SizedBox(height: 40),
+          Container(
+            margin: EdgeInsets.symmetric(horizontal: 20),
+            child: ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: const Color.fromARGB(255, 18, 146, 163),
+                padding: EdgeInsets.symmetric(horizontal: 100, vertical: 10),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10),
+                ),
+              ),
+              onPressed: () {},
+              child: Text(
+                "Sign In",
+                style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                ),
+              ),
+            ),
+          ),
+          SizedBox(height: 2),
+          Container(
+            margin: EdgeInsets.symmetric(horizontal: 20),
+            child: Text(
+              "OR",
+              style: TextStyle(
+                color: Colors.black.withOpacity(0.4),
+                fontWeight: FontWeight.bold,
+                fontSize: 20,
+              ),
+            ),
+          ),
+          Container(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Image.asset("assets/images/google.png", width: 50, height: 50),
+                SizedBox(width: 10),
+                Image.asset(
+                  "assets/images/facebook.png",
+                  width: 50,
+                  height: 40,
+                ),
+              ],
+            ),
+          ),
+          SizedBox(height: 20),
+          Container(
+            margin: EdgeInsets.symmetric(horizontal: 85),
+            child: Row(
+              children: [Text("Don't have an account? "), 
+              Text(
+                "Sign Up",
+                style:TextStyle(
+                  color:Colors.cyan,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 15,
+                )
+                )],
+            ),
+          ),
         ],
       ),
     );
