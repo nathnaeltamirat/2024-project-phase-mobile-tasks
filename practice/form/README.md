@@ -9,6 +9,6 @@ Form application that includes navigation and other materials.
 
 ![image](signin.jpg)
 
-![image](main.png)
+![image](main1.jpg)
 
-![image](main1.png)
+![image](main2.jpg)
