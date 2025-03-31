@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:form/signin_page.dart';
 
 class createAccount extends StatelessWidget {
   const createAccount({super.key});
@@ -29,7 +30,7 @@ class createAccount extends StatelessWidget {
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 22),
               ),
             ],
-          ),        
+          ),
           SizedBox(height: 5),
           Container(
             margin: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
@@ -43,7 +44,7 @@ class createAccount extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(height:10),
+          SizedBox(height: 10),
           Row(
             children: [
               SizedBox(width: 20),
@@ -88,7 +89,7 @@ class createAccount extends StatelessWidget {
               ),
             ),
           ),
-   SizedBox(height:10),
+          SizedBox(height: 10),
           Row(
             children: [
               SizedBox(width: 20),
@@ -137,7 +138,12 @@ class createAccount extends StatelessWidget {
                   borderRadius: BorderRadius.circular(10),
                 ),
               ),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => SigninPage()),
+                );
+              },
               child: Text(
                 "Sign Up",
                 style: TextStyle(
@@ -178,15 +184,17 @@ class createAccount extends StatelessWidget {
           Container(
             margin: EdgeInsets.symmetric(horizontal: 85),
             child: Row(
-              children: [Text("Don't have an account? "), 
-              Text(
-                "Sign In",
-                style:TextStyle(
-                  color:Colors.cyan,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 15,
-                )
-                )],
+              children: [
+                Text("Don't have an account? "),
+                Text(
+                  "Sign In",
+                  style: TextStyle(
+                    color: Colors.cyan,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 15,
+                  ),
+                ),
+              ],
             ),
           ),
         ],

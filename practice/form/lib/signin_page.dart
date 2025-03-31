@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:form/homePage.dart';
 
 class SigninPage extends StatelessWidget {
   const SigninPage({super.key});
@@ -119,7 +120,12 @@ class SigninPage extends StatelessWidget {
                   borderRadius: BorderRadius.circular(10),
                 ),
               ),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Homepage()),
+                );
+              },
               child: Text(
                 "Sign In",
                 style: TextStyle(
@@ -160,15 +166,17 @@ class SigninPage extends StatelessWidget {
           Container(
             margin: EdgeInsets.symmetric(horizontal: 85),
             child: Row(
-              children: [Text("Don't have an account? "), 
-              Text(
-                "Sign Up",
-                style:TextStyle(
-                  color:Colors.cyan,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 15,
-                )
-                )],
+              children: [
+                Text("Don't have an account? "),
+                Text(
+                  "Sign Up",
+                  style: TextStyle(
+                    color: Colors.cyan,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 15,
+                  ),
+                ),
+              ],
             ),
           ),
         ],

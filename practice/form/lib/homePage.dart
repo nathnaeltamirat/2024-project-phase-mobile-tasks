@@ -570,8 +570,8 @@ class Homepage extends StatelessWidget {
               left:120,
               child:   Image.asset(
                 "assets/images/women.png",
-                width: 80,
-                height:80,
+                width: 200,
+                height:110,
               )
             
             )
